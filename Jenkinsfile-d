@@ -6,7 +6,7 @@ pipeline {
     //    node { label "workstation" }
     //}
     agent {
-        label 'terraform'
+        label 'terraform infra'
     }
 
     stages{
