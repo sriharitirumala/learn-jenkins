@@ -3,7 +3,7 @@ pipeline {
 
     // Node Name Agent
     agent {
-        name { label "workstation" }
+        node { label "workstation" }
     }
     stages{
 
