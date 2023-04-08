@@ -5,14 +5,14 @@ pipeline {
     //agent {
     //    node { label "workstation" }
     //}
-    agent {
-        label 'terraform'
-    }
+  agent {
+    label 'terraform'
+  }
 
-    environment {
-        SAMPLE_URL = "google.com"
-    }
-
+  environment {
+    SAMPLE_URL = "google.com"
+    SSH = credentials("SSH")
+  }
     stages{
 
         stage ("one") {
@@ -29,9 +29,4 @@ pipeline {
     }
 }
 
-    post {
-    failure {
-        echo "U can do it well again"
-    }
-}
 
