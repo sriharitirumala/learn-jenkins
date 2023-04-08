@@ -6,7 +6,7 @@ pipeline {
     //    node { label "workstation" }
     //}
     agent {
-        label 'terraform infra'
+        label 'terraform'
     }
 
     stages{
@@ -25,4 +25,9 @@ pipeline {
     }
 }
 
+    post {
+    failure {
+        echo "U can do it well again"
+    }
+}
 
